@@ -55,8 +55,7 @@ const Deliverymg = () => {
       driverId,
       driverName,
       contacts,
-      carState,
-      pickUpPoint,
+      carState
       id: Math.floor(Math.random() * 1000),
     };
     const newCars = oldCars.concat(newCar);
@@ -67,8 +66,7 @@ const Deliverymg = () => {
       driverId === "" ||
       driverName === "" ||
       contacts === "" ||
-      carState === "" ||
-      pickUpPoint === ""
+      carState === "" 
     ) {
       alert("Fields are empty");
       setIsValid(true);
@@ -87,7 +85,6 @@ const Deliverymg = () => {
     setDriverName("");
     setContacts("");
     setCarState("");
-    setPickUpPoint("");
   };
 
   const deleteCarHandler = (id) => {
@@ -193,7 +190,6 @@ const Deliverymg = () => {
               <TableCell align="center">{car.driverName}</TableCell>
               <TableCell align="center">{car.contacts}</TableCell>
               <TableCell align="center">{car.carState}</TableCell>
-              <TableCell align="center">{car.pickUpPoint}</TableCell>
             </TableRow>
           ))}
         </TableBody>
